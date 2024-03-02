@@ -1,0 +1,12 @@
+pip
+setuptools
+opencv-python
+flask
+numpy
+face_recognition
+dlib
+mysql-connector-python
+pyserial
+requests
+fastapi
+uvicorn
