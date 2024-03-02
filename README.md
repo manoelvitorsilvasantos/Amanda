@@ -1,6 +1,6 @@
-# Eyes-A Project - Eyes-of-Amanda v1.0.0
+# Amanda
 
-Equip development:
+Desenvolvido por
 * [Manoel Vitor](https://github.com/manoelvitorsilvasantos)
 
 ## Como clonar esse repositório
@@ -13,8 +13,8 @@ Pra clonar esse repositório para sua máquina local, siga as etapas:
 
 ```bash
 cd C:/users/{your_username}/Documents/
-git clone https://github.com/manoelvitorsilvasantos/Eyes-V
-cd C:/users/{your_username}/Documents/Eyes-V
+git clone https://github.com/manoelvitorsilvasantos/Amanda
+cd C:/users/{your_username}/Documents/Amanda
 ```
 
 ## Como instalar as dependências (dlib)
@@ -23,7 +23,7 @@ cd C:/users/{your_username}/Documents/Eyes-V
 3. Execute o seguinte comando.
 
 ```bash
-cd C:/users/{your_username}/Documents/Eyes-V
+cd C:/users/{your_username}/Documents/Amanda
 pip install -r requirements.txt
 ```
 
@@ -51,7 +51,7 @@ deactivate
 3. Execute o comando para instalar a biblioteca já compilada.
 
 ```bash
-cd C:/users/{your_username}/Documents/Eyes-V
+cd C:/users/{your_username}/Documents/Amanda
 pip install dlib-19.19.0-cp38-cp38-win_amd64.whl
 ```
 Um video tutorial como resolver problemas ou bugs com a biblioteca dlib.
@@ -152,7 +152,7 @@ db = DatabaseConnect(
 ## QRCODE APP
 Você preceisa ler o qrcode quando você abrir o Whatsapp e digitar o texto: join arm-tree.
 <p align="center">
-	<img src="https://raw.githubusercontent.com/manoelvitorsilvasantos/Eyes-V/main/frontend/assets/img/qrcode.png" width="128">
+	<img src="https://raw.githubusercontent.com/manoelvitorsilvasantos/Amanda/main/frontend/assets/img/qrcode.png" width="128">
 </p>
 
 ou 

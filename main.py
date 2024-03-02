@@ -41,13 +41,13 @@ class FaceDetectionRecognition:
         self.used_sessions = {}
         self.session = requests.Session()
 
-        self.my_serial = MYSerial('COM7', 9600)
+        #self.my_serial = MYSerial('COM7', 9600)
       
         # Crie uma instância da classe DatabaseConnection
         db = DatabaseConnection(
             dbname="image_db",
-            user="ifba",
-            password="ifba6514",
+            user="mvictor",
+            password="65564747",
             host="localhost",
             port="3306"
         )
@@ -80,7 +80,7 @@ class FaceDetectionRecognition:
             self.know_matricula.append(matricula) # Usa a matricula do aluno.
 
     def detect_recognize_faces(self):
-        self.my_serial.load()
+        #self.my_serial.load()
         while True:
             ret, img = self.cap.read()
             rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -100,13 +100,13 @@ class FaceDetectionRecognition:
                     cor = self.cadastrado_cor
                 # Verification student in the database.
                 if name == "Desconhecido": # student dont found.
-                    #cv2.rectangle(img, (left, top), (right, bottom), cor, self.espessura)
-                    #aqcv2.putText(img, "["+ name + "]", (left, top - 10), self.font, self.tamanho, cor, self.espessura, cv2.LINE_AA)
-                    self.my_serial.receive(0) # envia dados serial para o arduino
+                    cv2.rectangle(img, (left, top), (right, bottom), cor, self.espessura)
+                    aqcv2.putText(img, "["+ name + "]", (left, top - 10), self.font, self.tamanho, cor, self.espessura, cv2.LINE_AA)
+                    #self.my_serial.receive(0) # envia dados serial para o arduino
                 else: # There is a student with its similiraty face.
                     cv2.rectangle(img, (left, top), (right, bottom), cor, self.espessura)
                     cv2.putText(img, "[Aluno:"+  name + "]", (left, top - 10), self.font, self.tamanho, cor, self.espessura, cv2.LINE_AA)
-                    self.my_serial.receive(1) # envia dados serial para o arduino
+                    #self.my_serial.receive(1) # envia dados serial para o arduino
                     url = "http://127.0.0.1:8000/send_message"
                     resultado = self.get_user_session(url, name, celphone)
                     print(resultado)
